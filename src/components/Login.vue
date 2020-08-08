@@ -51,12 +51,12 @@ export default {
 		//const { data: res } = await this.$http.post('login', this.loginForm)
 		// if (res.meta.status !== 200) return this.$message.error('登录失败！')
 		if(this.loginForm.username=='admin'&&this.loginForm.password=='admin123'){
-			window.sessionStorage.setItem('token',this.loginForm.username)
 			this.$message.success('登录成功')
 			this.$router.push('/home')
 		}else{
 			this.$message.error('登录失败！')
 		}
+		// window.sessionStorage.setItem('token', res.data.token)
       })
     }
   }
